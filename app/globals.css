@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Inter:wght@400;500&display=swap');
 @import "tailwindcss";
 /*
   ---break---
@@ -72,6 +73,28 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
+  }
+  body {
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: #F8F9FA; /* white */
+    color: #0D0D0D; /* black */
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', Helvetica Neue, Arial, sans-serif;
+    color: #0D0D0D;
+    font-weight: 600;
+  }
+  a {
+    color: #0D0D0D; /* monochrome by default */
+    text-decoration: underline;
+    transition: color 0.2s;
+  }
+  a.accent {
+    color: #008CFF; /* Lark Blue accent, use only for key actions */
+  }
+  ::selection {
+    background: #B5B7BC; /* Whisper Gray for selection */
+    color: #0D0D0D;
   }
 }
 

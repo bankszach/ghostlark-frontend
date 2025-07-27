@@ -32,13 +32,10 @@ function UserMenu() {
   if (!user) {
     return (
       <>
-        <Link
-          href="/pricing"
-          className="text-sm font-medium text-gray-700 hover:text-gray-900"
-        >
+        <Link href="/pricing" className="text-base font-inter text-black hover:text-gray transition-colors">
           Pricing
         </Link>
-        <Button asChild className="rounded-full">
+        <Button asChild className="rounded-full px-5 py-2 text-base font-poppins font-semibold bg-lark text-black hover:bg-black hover:text-white transition-colors shadow">
           <Link href="/sign-up">Sign Up</Link>
         </Button>
       </>
@@ -80,13 +77,13 @@ function UserMenu() {
 
 function Header() {
   return (
-    <header className="border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-        <Link href="/" className="flex items-center">
-          <CircleIcon className="h-6 w-6 text-orange-500" />
-          <span className="ml-2 text-xl font-semibold text-gray-900">ACME</span>
+    <header className="border-b border-gray bg-white shadow-sm">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <Link href="/" className="flex items-center gap-3 group">
+          <img src="/ghostlark-lark-only-black.png" alt="GhostLark Lark Logo" className="h-10 w-10 transition-transform group-hover:scale-105" />
+          <span className="text-2xl font-poppins font-semibold text-black tracking-tight">GhostLark</span>
         </Link>
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center gap-6">
           <Suspense fallback={<div className="h-9" />}>
             <UserMenu />
           </Suspense>
